@@ -352,7 +352,8 @@ void World::fling(float x, float y)
     {
         auto fling = -glm::normalize(glm::vec2(x, y));
         grav_vec = fling * g;
-        balls.emplace_back(win_size, ball_colors);
+        for(std::size_t i = 0; i < 50; ++i)
+            balls.emplace_back(win_size, ball_colors);
     }
 }
 
